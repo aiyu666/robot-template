@@ -13,7 +13,7 @@ Input Search Text
   Wait Until Element Is Visible And Enabled    ${search_input_box_xpath}
   Input Text    ${search_input_box_xpath}  ${text}
 
-Search Text ${text}
+Search Text about ${text}
   Input Search Text    ${text}
   Click Search Button
 

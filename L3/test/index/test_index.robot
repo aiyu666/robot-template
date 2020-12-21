@@ -6,5 +6,5 @@ Suite Teardown    Close Browser
 
 *** Test Cases ***
 User will find relevant information after search the keywords
-  When Search text Apex Central
+  When Search text about Apex Central
   Then Verify search sucess and page contain Apex Central
