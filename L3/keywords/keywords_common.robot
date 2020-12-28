@@ -5,6 +5,8 @@ Resource    ../init.robot
 *** Keywords ***
 Open Browser And Navigate
   [Arguments]  ${url}=${GOOGLE_URL}  ${endpoint}=${empty}  ${browser}=${DEFAULT_BROWSER}  ${options}=add_argument("--ignore-certificate-errors")
+  ${status_code} =  Ping Google
+  Log    ${status_code}
   Open Browser  ${url}${endpoint}  ${browser}  options=${options}
   Verify Current URL Is Correct  ${url}/
 
