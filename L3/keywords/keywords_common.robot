@@ -9,7 +9,7 @@ Open Browser And Navigate
   Log    ${status_code}
   Open Browser  ${url}${endpoint}  ${browser}  options=${options}
   Verify Current URL Is Correct  ${url}/
-
+ 
 Verify Current URL Is Correct
   [Arguments]  ${expect_url}
   ${actual_url}=   Get Location
