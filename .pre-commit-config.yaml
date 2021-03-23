@@ -1,0 +1,62 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.4.0
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: check-json
+    -   id: check-yaml
+    -   id: check-merge-conflict
+    -   id: check-ast
+    -   id: debug-statements
+    -   id: name-tests-test
+-   repo: https://github.com/PyCQA/flake8.git
+    rev: 3.9.0
+    hooks:
+    -   id: flake8
+        args:
+        - --ignore=E501,W504
+-   repo: https://github.com/pre-commit/mirrors-autopep8.git
+    rev: v1.5.6
+    hooks:
+    -   id: autopep8
+        args:
+        - -i
+        - --ignore=E265,E309,E501
+        - -v
+-   repo: https://github.com/FalconSocial/pre-commit-python-sorter.git
+    sha: b57843b0b874df1d16eb0bef00b868792cb245c2
+    hooks:
+    -   id: python-import-sorter
+        args:
+        - --silent-overwrite
+-   repo: https://github.com/guykisel/pre-commit-robotframework-tidy.git
+    rev: f5942827aadc04b1637527b8b5c4b2bc1850ca6b
+    hooks:
+    -   id: robotframework-tidy-wrapper
+        args:
+        - --space-count=2
+-   repo: https://github.com/msc0953/pre-commit-robotframework-lint.git
+    sha: 04770a44648d3697a3fc974dff212c4be7d3ed88
+    hooks:
+    -   id: robotframework-lint
+        args:
+        - --ignore=LineTooLong
+        - --ignore=TrailingWhitespace
+        - --ignore=TooManyTestCases
+        - --ignore=RequireKeywordDocumentation
+        - --ignore=RequireSuiteDocumentation
+        - --ignore=RequireTestDocumentation
+        - --ignore=TooFewKeywordSteps
+-   repo: https://github.com/PyCQA/pylint.git
+    rev: pylint-2.7.2
+    hooks:
+    -   id: pylint
+        args:
+        - --disable=line-too-long
+        - --disable=import-error
+        - --disable=too-many-branches
+        - --disable=missing-docstring
+        - --disable=too-few-public-methods
+        - --disable=invalid-name
+        - --disable=imports-for-multi-line-imports
