@@ -3,6 +3,7 @@ Documentation    Test suite of agent_installation
 Resource    ../init.robot
 
 Force Tags    app-vone-av-win-agent  agent
+Metadata    Version    ${BUILD_VERSION}
 Test Timeout    ${TIMEOUT}
 
 *** Test Cases ***
