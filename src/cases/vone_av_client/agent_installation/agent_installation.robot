@@ -10,10 +10,10 @@ Test template sample
     [Tags]    agent_installation_B
     [Template]    Check User Can Install Agent Success
         msi
-        msi
+        dmg
 
 User can install agent
     [Tags]    agent_installation_A
-    Given I download msi package
-    When I install agent using msi package 
-    Then I should see the regist key is exist
+    Download Package    msi
+    Install Agent With Package    msi
+    Verify Regist Key Is Exist
